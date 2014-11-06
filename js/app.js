@@ -9,9 +9,12 @@ angular.module("MoviesApp", [])
 	.controller("MoviesController", function($scope) {
 		//initialize variables with list of movies such that it'll be accessed in the view
 		$scope.movies = movies;
+		$scope.filteredMovies = movies;
 
 		$scope.sortCol = "rank";
 		$scope.sortReverse = false;
+
+		$scope.titleSearch = undefined;
 
 		$scope.sortBy = function(colName) {
 			if ($scope.sortCol == colName) {
